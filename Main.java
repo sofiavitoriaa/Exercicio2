@@ -7,9 +7,9 @@ public class Main {
         /*
         var scanner = new Scanner(System.in);
         System.out.print("Digite um número: ");
-        var numero = scanner.nextInt();
+        var numero2 = scanner.nextInt();
         for (int i = 1; i <= 10; i++){
-            System.out.printf("%s x %s = %s\n", numero, i, (i * numero));
+            System.out.printf("%s x %s = %s\n", numero2, i, (i * numero2));
         }
         */
 
@@ -21,6 +21,7 @@ public class Main {
             // Se for entre 35,5 e 39,9: "Obesidade grau II (severa)".
             // Se for maior que 40,0: "obesidade III (mórbida)".
         
+        /*
         var scanner = new Scanner(System.in);
         System.out.println("Digite a sua altura: ");
         var altura = scanner.nextFloat();
@@ -42,7 +43,7 @@ public class Main {
         } else if (imc >= 40){
             System.out.println("Obesidade grau III (mórbida)");
         }
-        
+        */
 
         // Escreva um código que o usuário entre com um primeiro número, um segundo número maior que o primeiro e escolhe entre a opção par e impar, com isso o código deve informar todos os números pares ou ímpares (de acordo com a seleção inicial) no intervalo de números informados, incluindo os números informados em ordem decrescente.
 
@@ -73,5 +74,24 @@ public class Main {
 
         // Escreva um código onde o usuário informa um número inicial, posteriormente irá informar outros N números, a execução do código irá continuar até que o número informado dividido pelo primeiro número tenha resto diferente de 0 na divisão, números menores que o primeiro número devem ser ignorados.
 
+        var scanner = new Scanner(System.in);
+
+        System.out.print("Digite um número: ");
+        int numero1 = scanner.nextInt();
+
+        while (true) {
+            System.out.print("Digite outro número: ");
+            int numero2 = scanner.nextInt();
+
+            if (numero2 < numero1) {
+                System.out.println("Número ignorado. Digite um número maior.");
+                continue;
+            }
+            if (numero2 % numero1 != 0) {
+                System.out.println("Número não divisível pelo número inicial. Encerrando.");
+                break;
+            }
+        }
+        scanner.close();
     }
 }
